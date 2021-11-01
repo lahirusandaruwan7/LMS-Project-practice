@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
- 
+  text-align: center;
   height: 5vh;
   background: lightgreen;
 `;
@@ -10,6 +10,8 @@ export const Main = styled.main`
   background: lightblue;
 `;
 export const Footer = styled.footer`
-   text-align:center;
-   background: lightgreen;
+  display: flex;
+  justify-content: center;
+
+  background: lightgreen;
 `;
