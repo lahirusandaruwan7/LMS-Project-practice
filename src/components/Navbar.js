@@ -1,25 +1,34 @@
 import styled from "styled-components/";
 
 export const Navbar = styled.ul`
+display:flex;
+align-items:center;
 list-style-type: none;
-margin: 0;
+margin: 0px;
+height: 5vh;
+position:fixed;
+top:0;
+width:100%;
+z-index:1;
 overflow: hidden;
-background-color:#333
+background-color:${(props)=>props.theme.primary.main};
 `;
 export const NavItem = styled.li`
-  float:left;
+  display:inline;
+ 
+
 `;
 export const NavLink = styled.a`
-  color: white;
+  color: ${(props)=>props.theme.primary.textcolor};
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1.25em;
 
   :hover {
-    background-color: #4fc3f7;
+    background-color: ${(props)=>props.theme.primary.light};
   }
   .active {
-    background-color:#04aa6d;
+    background-color:${(props)=>props.theme.primary.dark};
   }
 `;

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  text-align: center;
   height: 5vh;
-  background: lightgreen;
+ 
 `;
 export const Main = styled.main`
   height: 95vh;
   background: lightblue;
+  margin: 0px;
 `;
 export const Footer = styled.footer`
   display: flex;
