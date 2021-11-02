@@ -1,15 +1,9 @@
 import styled from "styled-components/";
 
 export const Navbar = styled.ul`
-display:flex;
-align-items:center;
+padding:1em 0;
 list-style-type: none;
 margin: 0px;
-height: 5vh;
-position:fixed;
-top:0;
-width:100%;
-z-index:1;
 overflow: hidden;
 background-color:${(props)=>props.theme.primary.main};
 `;

@@ -1,8 +1,11 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import { BsBookHalf } from "react-icons/bs";
 
-import { Header, Main, Footer } from "./components/Layout";
+import {  Main, Footer } from "./components/Layout";
 import { Navbar, NavItem, NavLink } from "./components/Navbar";
+
+import Dashboard from "./containers/Dashboard";
 
 function App() {
   const theme = {
@@ -19,8 +22,13 @@ function App() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Header>
+    
         <Navbar>
+        <NavItem>
+          <NavLink>
+            <BsBookHalf/>
+          </NavLink>
+        </NavItem>
           <NavItem>
             <NavLink href="#">Catlog</NavLink>
           </NavItem>
@@ -28,9 +36,9 @@ function App() {
             <NavLink href="#">Dashboard</NavLink>
           </NavItem>
         </Navbar>
-      </Header>
-      <Main>This is the main</Main>
-      <Footer>This is the footer</Footer>
+      
+      <Main><Dashboard></Dashboard></Main>
+      <Footer> Copyright {new Date().getFullYear()} &copy; METACode {" "}</Footer>
     </ThemeProvider>
   );
 }
