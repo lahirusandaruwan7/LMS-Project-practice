@@ -7,6 +7,7 @@ import { Navbar, NavItem, NavLink } from "./components/Navbar";
 
 import Dashboard from "./containers/Dashboard";
 
+
 function App() {
   const theme = {
     primary: {
@@ -38,7 +39,9 @@ function App() {
         </Navbar>
       </Header>
       <Main>
-        <Dashboard></Dashboard>
+      
+        <Dashboard> </Dashboard>
+       
       </Main>
       <Footer> Copyright {new Date().getFullYear()} &copy; METACode </Footer>
     </ThemeProvider>
