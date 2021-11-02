@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 
 import { ThemeProvider } from "styled-components";
 import { BsBookHalf } from "react-icons/bs";
-import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Main, Footer, Header } from "./components/Layout";
 import { Navbar, NavItem, NavLink } from "./components/Navbar";
@@ -40,7 +40,12 @@ function App() {
         <Route exact path={CATALOG}>
           <Spinner></Spinner>
         </Route>
-        <Route><NotFound></NotFound></Route>
+        <Route exact path="/">
+          <Dashboard></Dashboard>
+        </Route>
+        <Route>
+          <NotFound></NotFound>
+        </Route>
       </Switch>
     </Suspense>
   );
