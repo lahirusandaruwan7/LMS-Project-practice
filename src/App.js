@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { BsBookHalf } from "react-icons/bs";
 
-import {  Main, Footer } from "./components/Layout";
+import { Main, Footer, Header } from "./components/Layout";
 import { Navbar, NavItem, NavLink } from "./components/Navbar";
 
 import Dashboard from "./containers/Dashboard";
@@ -22,13 +22,13 @@ function App() {
   };
   return (
     <ThemeProvider theme={theme}>
-    
+      <Header>
         <Navbar>
-        <NavItem>
-          <NavLink>
-            <BsBookHalf/>
-          </NavLink>
-        </NavItem>
+          <NavItem>
+            <NavLink>
+              <BsBookHalf />
+            </NavLink>
+          </NavItem>
           <NavItem>
             <NavLink href="#">Catlog</NavLink>
           </NavItem>
@@ -36,9 +36,11 @@ function App() {
             <NavLink href="#">Dashboard</NavLink>
           </NavItem>
         </Navbar>
-      
-      <Main><Dashboard></Dashboard></Main>
-      <Footer> Copyright {new Date().getFullYear()} &copy; METACode {" "}</Footer>
+      </Header>
+      <Main>
+        <Dashboard></Dashboard>
+      </Main>
+      <Footer> Copyright {new Date().getFullYear()} &copy; METACode </Footer>
     </ThemeProvider>
   );
 }
