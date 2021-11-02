@@ -13,7 +13,9 @@ import { DASHBOARD, CATALOG } from "./shared/routes";
 const Dashboard = React.lazy(() => {
   return import("./containers/Dashboard");
 });
-
+const NotFound = React.lazy(() => {
+  return import("./containers/404");
+});
 function App() {
   const theme = {
     primary: {
@@ -38,6 +40,7 @@ function App() {
         <Route exact path={CATALOG}>
           <Spinner></Spinner>
         </Route>
+        <Route><NotFound></NotFound></Route>
       </Switch>
     </Suspense>
   );
